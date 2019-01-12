@@ -30,6 +30,7 @@
     "prettier-eslint": "^8.8.2"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "koa": "^2.5.3",
     "koa-router": "^7.4.0",
