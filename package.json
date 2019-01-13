@@ -4,7 +4,8 @@
   "description": "React SSR proof of concept (POC)",
   "main": "src/index.js",
   "scripts": {
-    "start": "node --require @babel/register src/index.js"
+    "start": "node --require @babel/register src/server.js",
+    "build": "webpack --progress --colors --config=webpack.config.js --env.development"
   },
   "repository": {
     "type": "git",
@@ -19,8 +20,11 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/register": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.0",
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
+    "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
@@ -28,13 +32,16 @@
     "husky": "^1.1.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
-    "prettier-eslint": "^8.8.2"
+    "prettier-eslint": "^8.8.2",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "koa": "^2.5.3",
     "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
