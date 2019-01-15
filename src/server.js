@@ -23,7 +23,7 @@ router.get('/hello-react-ssr', require('./routes/hello-react-ssr').default);
 app.use(router.routes()).use(router.allowedMethods());
 
 // start server
-server.listen(3333);
+server.listen(3001);
 const address = server.address();
 const baseUrl = formatUrl({
   protocol: 'http',
